@@ -1,0 +1,117 @@
+.video {
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 65px 0;
+    background-size: cover;
+    .section-title {
+        font-size: 46px;
+    }
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 65px;
+        @media ( max-width: $large ) {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+    &-wrap {
+        max-width: 695px;
+        width: 100%;
+        padding-right: 15px;
+        @media ( max-width: $large ) {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            padding-bottom: 30px;
+        }
+        @media ( max-width: $mobile ) {
+            max-width: 431px;
+            iframe {
+                height: 245px;
+            }
+        }
+    }
+    &-info {
+        color: $colorMain;
+        width: 400px;
+        @media ( max-width: $mobile ) {
+            width: auto;
+        }
+        &__block {
+            white-space: nowrap;
+            &s {
+                display: flex;
+                font-size: 22px;
+                font-weight: 700;
+                align-items: flex-end;
+                margin-bottom: 25px;
+                justify-content: space-around;
+                @media ( max-width: $mobilesm ) {
+                    font-size: 16px;
+                }
+                .svg-sprite-icon {
+                    margin: auto;
+                    display: block;
+                }
+            }
+            &-new {
+                padding-right: 25px;
+                @media ( max-width: $mobile ) {
+                    padding-right: 15px;
+                }
+                @media ( max-width: $mobilesm ) {
+                    padding-right: 0;
+                }
+                .svg-sprite-icon {
+                    height: 104px;
+                    width: 104px;
+                    @media ( max-width: $mobilesm ) {
+                        height: 60px;
+                        width: 60px;
+                    }
+                }
+            }
+            &-second {
+                .svg-sprite-icon {
+                    height: 80px;
+                    width: 80px;
+                    @media ( max-width: $mobilesm ) {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+        .svg-sprite-icon {
+            fill: $colorMain;
+        }
+        &__true {
+            font-size: 22px;
+            font-weight: 500;
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 2px solid $colorMain;
+            border-bottom: 2px solid $colorMain;
+            .svg-sprite-icon {
+                width: 39px;
+                height: 47px;
+            }
+        }
+        &__follow {
+            background: $colorMain;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 55px;
+            font-size: 21px;
+            font-weight: 500;
+            margin-top: 25px;
+            border-radius: 26px;
+        }
+    }
+}

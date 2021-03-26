@@ -1,0 +1,81 @@
+extends layout/main
+
+block variables
+	-var title = 'Вторичка'
+
+block content
+	section.hero.flat(style="background-image: url(/static/images/common/hero-bg-map.jpg)")
+		.container
+			.hero-title.flat-title Найти квартиру в Новороссийске
+			.hero-link.flat-link
+				a(href="#").flat-link__item.hero-link__item.hero-link__item_current Квартиры в новостройках
+				a(href="#").flat-link__item.hero-link__item Вторичное жильё
+	section.second
+		.container
+			.second-content
+				aside.second-side
+				.second-list
+					.second-list__card
+						.second-list__card-content
+							.second-list__card-slider.swiper-container
+								.second-list__card-pagination.swiper-pagination
+								.swiper-wrapper
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+							a(href="#").second-list__card-info
+								.second-list__card-title 2-к квартира, 60.5 м², 6/16 эт.
+								.second-list__card-price 3 120 524 ₽ 
+								.second-list__card-address Центральный район, ул. Бориса Пупко,8
+								.second-list__card-bot
+									.second-list__card-date Размещено 5 дней назад
+									.second-list__card-more Подробнее
+					.second-list__card
+						.second-list__card-content
+							.second-list__card-slider.swiper-container
+								.second-list__card-pagination.swiper-pagination
+								.swiper-wrapper
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+							a(href="#").second-list__card-info
+								.second-list__card-title 2-к квартира, 42 м², 4/8 эт.
+								.second-list__card-price 3 120 524 ₽
+								.second-list__card-address Центральный район, ул. Бориса Пупко,8
+								.second-list__card-bot
+									.second-list__card-date Размещено 5 дней назад
+									.second-list__card-more Подробнее
+					.second-list__card
+						.second-list__card-content
+							.second-list__card-slider.swiper-container
+								.second-list__card-pagination.swiper-pagination
+								.swiper-wrapper
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+									.second-list__card-img.swiper-slide
+										img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+										.swiper-lazy-preloader.swiper-lazy-preloader-white
+							a(href="#").second-list__card-info
+								.second-list__card-title 2-к квартира, 60.5 м², 6/16 эт.
+								.second-list__card-price 3 120 524 ₽
+								.second-list__card-address Центральный район, ул. Бориса Пупко,8
+								.second-list__card-bot
+									.second-list__card-date Размещено 5 дней назадe
+									.second-list__card-more Подробнее
+	include modules/choose/choose

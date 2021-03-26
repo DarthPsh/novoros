@@ -1,0 +1,162 @@
+// header { flex: 0 0 auto; }
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 18px 0;
+    @media ( max-width: $tablet ) {
+        padding-right: 60px;
+    }
+    &-logo {
+        font-size: 27px;
+        font-weight: 700;   
+        text-transform: uppercase;
+        padding-right: 15px;
+        @media ( max-width: $tablet ) {
+            font-size: 15px;
+        }
+        &_accent {
+            color: $colorAccent;
+        }
+        &_main {
+            color: $colorMain;
+        }
+    }
+    &-menu {
+        display: flex;
+        .menu-item {
+            a {
+                padding: 5px;
+                font-size: 12px;
+                font-weight: 600;
+                color: $colorMain;
+                &:hover {
+                    color: $colorAccent;
+                }
+                @media ( max-width: $tablet ) {
+                    padding: 5px;
+                    display: block;
+                    font-size: 16px;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+        .current-menu-item {
+            a {
+                color: $colorAccent;
+                text-decoration: underline;
+                text-decoration-color: $colorAccent;
+            }
+        }
+        @media ( max-width: $large ) {
+            width: 100%;
+            order: 1;
+        }
+        @media ( max-width: $tablet ) {
+            position: fixed;
+            background: $white;
+            flex-direction: column;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            opacity: 0;
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s ease-in;
+        }
+    }
+    &-address {
+        font-size: 17px;
+        line-height: 29px;
+        font-weight: 600;
+        padding-right: 15px;
+        .svg-sprite-icon {
+            fill: $colorAccent;
+            width: 17px;
+            height: 22px;
+            margin-right: 8px;
+        }
+    }
+    &-contacts {
+        &__phone {
+            font-size: 21px;
+            font-weight: 600;
+            color: $colorMain;
+            display: flex;
+            align-items: center;
+            @media ( max-width: $tablet ) {
+                font-size: 18px;
+            }
+            &:hover {
+                color: $colorAccent;
+            }
+        }
+        .svg-sprite-icon {
+            width: 19px;
+            height: 19px;
+            fill: $colorAccent;
+            margin-right: 8px;
+        }
+    }
+    &-burger {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        z-index: 10;
+        display: none;
+        &__line {
+            height: 5px;
+            width: 31px;
+            border-radius: 5px;
+            background: $colorMain;
+            margin-bottom: 4px;
+            transition: all .3s ease-in;
+            &-mid {
+                position: relative;
+                &:before {
+                    content: '';
+                    height: 5px;
+                    width: 31px;
+                    border-radius: 5px;
+                    background: $colorMain;
+                    display: block;
+                }
+            }
+        }
+        @media ( max-width: $tablet ) {
+            display: block;
+        }
+    }
+    &_active {
+        .header-menu {
+            left: 0;
+            opacity: 1;
+        }
+        .header-burger_active {
+            position: fixed;
+            .header-burger__line {
+                &-top {
+                    transform: translateY(5px);
+                    opacity: 0;
+                }
+                &-mid {
+                    transform: rotate(135deg);
+                    &:before {
+                        transform: rotate(-90deg);
+                    }
+                }
+                &-bot {
+                    transform: translateY(-5px);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &_second {
+        padding-right: 0;
+    }
+}

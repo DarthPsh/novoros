@@ -1,0 +1,179 @@
+.stages {
+    padding: 50px 0 105px 0;
+    @media ( max-width: $mobile ) {
+        padding-bottom: 50px;
+    }
+    &-tab {
+        display: flex;
+        justify-content: center;
+        @media ( max-width: $tablet ) {
+            flex-direction: column;
+            justify-content: center;
+            align-items:  center;
+        }
+        &__btn {
+            width: 305px;
+            height: 63px;
+            border: none;
+            background: $colorMain;
+            color: $white;
+            border-radius: 32px;
+            font-size: 21px;
+            font-weight: 400;
+            margin: 60px 25px;
+            &_active {
+                background: $colorAccent;
+            }
+            @media ( max-width: $tablet ) {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+            @media ( max-width: $mobilesm ) {
+                width: 100%;
+            }
+        }
+    }
+    &-content {
+        &__block {
+            display: none;
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &-block {
+        // border: 1px solid red;
+        flex-basis: calc(100% / 3);
+        display: flex;
+        align-items: center;
+        position: relative;
+        @media ( max-width: $large ) {
+            flex-basis: calc(100% / 2);
+        }
+        @media ( max-width: $tablet ) {
+            flex-basis: 100%;
+        }
+        &__num {
+            opacity: 0.54;
+            color: #0c2e59;
+            font-size: 131px;
+            font-weight: 600;
+            font-family: monospace;
+            min-width: 140px;
+            @media ( max-width: $mobilesm ) {
+                font-size: 80px;
+                min-width: 100px;
+            }
+        }
+        &__img {
+            width: 95px;
+            height: 95px;
+            min-width: 95px;
+            border: 2px solid #efbd36;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 35px;
+            @media ( max-width: $mobilesm ) {
+                width: 70px;
+                height: 70px;
+                min-width: 70px;
+                left: 25px;
+            }
+            .svg-sprite-icon {
+                fill: $colorAccent;
+                height: 56px;
+                width: 56px;
+            }
+            .icon-blank {
+                transform: translateX(6px);
+            }
+        }
+        &__list {
+            color: $colorMain;
+            font-size: 21px;
+            font-weight: 500;
+            @media ( max-width: $mobilesm ) {
+                font-size: 14px;
+            }
+            &-item {
+                position: relative;
+                padding-left: 12px;
+                &:before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        &__arrow {
+            @media ( max-width: 1024px ) {
+                display: none;
+            }
+            .svg-sprite-icon {
+                fill: $colorAccent;
+                width: 160px;
+            }
+            &-left {
+                justify-content: flex-end;
+                padding-right: 40px;
+            }
+            &-right {
+                @media ( max-width: 1140px ) {
+                    padding-left: 10px;
+                }
+                @media ( max-width: 1100px ) {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+    &-options {
+        @media ( max-width: 1024px ) {
+            display: none;
+        }
+        display: flex;
+        justify-content: space-between;
+        .stages-block {
+            flex-basis: 35%
+        }
+        .stages-block__img {
+            position: static;
+            height: 120px;
+            width: 120px;
+            min-width: 120px;
+            margin-right: 10px;
+            .svg-sprite-icon {
+                position: absolute;
+            }
+            &-cash {
+                .svg-sprite-icon {
+                    height: 250px;
+                    width: 250px;
+                    left: -57px;
+                    top: -70px;
+                }
+            }
+            &-bank {
+                .svg-sprite-icon {
+                    height: 250px;
+                    width: 250px;
+                }
+            }
+        }
+        .stages-block__list-title {
+            font-size: 21px;
+        }
+        .stages-block__list {
+            font-size: 14px;
+        }
+    }
+}

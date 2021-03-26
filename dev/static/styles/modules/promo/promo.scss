@@ -1,0 +1,170 @@
+.promo {
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0 55px 0;
+    background-size: cover;
+    &-list {
+        display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
+        row-gap: 40px;
+        justify-items: center;
+        @media ( max-width: $tablet ) {
+            grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
+            column-gap: 5px;
+            // grid-template-columns: repeat(3, 1fr);
+        }
+        // @media ( max-width: $mobile ) {
+            // grid-template-columns: repeat(2, 1fr);
+        // }
+    }
+    &-card {
+    //     border: 1px solid red;
+        // padding: 0 42px;
+        position: relative;
+        // max-width: 400px;
+        // width: 321px;
+        max-width: 321px;
+        display: flex;
+        flex-direction: column;
+        padding-right: 40px;
+        justify-content: space-between;
+        @media ( max-width: $tablet ) {
+            padding-right: 26px;
+            max-width: 206px;
+        }
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border-radius: 50%;
+            border: 5px solid $colorAccent;
+            background: $white;
+            &-wrap {
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                padding-bottom: 100%;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &__info {
+            position: relative;
+            background: $colorAccent;
+            color: $colorMain;
+            line-height: 1;
+            border-radius: 0 0 50px;
+            &-wrap {
+                padding: 0 14px;
+                @media ( max-width: $tablet ) {
+                    padding: 0 7px;
+                }
+            }
+            &:before {
+                content: '';
+                background: $colorAccent;
+                width: 100%;
+                display: block;
+                height: 150px;
+                bottom: 100%;
+                position: absolute;
+                z-index: -1;
+                @media ( max-width: $tablet ) {
+                    height: 100px;
+                }
+            }
+            &-content {
+                padding: 8px 50px 20px 18px;
+                width: 253px;
+                @media ( max-width: $tablet ) {
+                    width: auto;
+                    padding: 11px 13px;
+                }
+            }
+            &-title {
+                font-size: 27px;
+                font-weight: 700;
+                @media ( max-width: $tablet ) {
+                    font-size: 16px;
+                }
+            }
+            &-desc {
+                font-size: 20px;
+                font-weight: 700;
+                @media ( max-width: $tablet ) {
+                    font-size: 12px;
+                }
+            }
+            &-more {
+                display: block;
+                padding-top: 22px;
+                font-size: 22px;
+                font-weight: 400;
+                color: $white;
+                text-decoration: underline;
+                @media ( max-width: $tablet ) {
+                    font-size: 16px;
+                }
+                .svg-sprite-icon {
+                    fill: $white;
+                    width: 29px;
+                    height: 22px;
+                    margin-left: 8px;
+                    @media ( max-width: $tablet ) {
+                        height: 14px;
+                        width: 19px;
+                    }
+                }
+            }
+            &-logo {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: $colorMain;
+                @media ( max-width: $tablet ) {
+                    height: 65px;
+                    width: 65px;
+                    right: -5px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    &-page {
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 195px 0 200px 0;
+        background-size: cover;
+    }
+    &-title {
+        text-align: center;
+        color: $white;
+        padding-bottom: 60px;
+    }
+    &-subtitle {
+        font-size: 35px;
+        font-weight: 500;
+        color: $colorAccent;
+        text-align: center;
+    }
+}

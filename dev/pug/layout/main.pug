@@ -1,0 +1,37 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1" user-scalable='no')
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+		script(src='https://api-maps.yandex.ru/2.1/?apikey=a6bb1a49-f2bd-4fa8-ac26-966f108f9d71&lang=ru_RU' type='text/javascript')
+	body
+		.wrapper
+			include ../modules/header/header
+			.poligon_left
+				img(class="poligon_left_1 poligon_left__img" src="static/images/common/left_poligon_1.png", alt="poligon")
+				img(class="poligon_left_2 poligon_left__img" src="static/images/common/left_poligon_2.png", alt="poligon")
+				img(class="poligon_left_3 poligon_left__img" src="static/images/common/left_poligon_3.png", alt="poligon")
+				img(class="poligon_left_4 poligon_left__img" src="static/images/common/left_poligon_4.png", alt="poligon")
+				img(class="poligon_left_5 poligon_left__img" src="static/images/common/left_poligon_5.png", alt="poligon")
+				img(class="poligon_left_6 poligon_left__img" src="static/images/common/left_poligon_6.png", alt="poligon")
+			.poligon_right
+				img(class="poligon_right_1 poligon_right__img" src="static/images/common/right_poligon_1.png", alt="poligon")
+				img(class="poligon_right_2 poligon_right__img" src="static/images/common/right_poligon_2.png", alt="poligon")
+				img(class="poligon_right_3 poligon_right__img" src="static/images/common/right_poligon_3.png", alt="poligon")
+				img(class="poligon_right_4 poligon_right__img" src="static/images/common/right_poligon_4.png", alt="poligon")
+				img(class="poligon_right_5 poligon_right__img" src="static/images/common/right_poligon_5.png", alt="poligon")
+			.content
+				block content
+			include ../modules/footer/footer
+		script(src="static/js/libs.js")
+		script(src="static/js/main.js")
+		block script

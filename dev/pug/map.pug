@@ -1,0 +1,15 @@
+extends layout/main
+
+block variables
+	-var title = 'Карта'
+
+block content
+	section.hero.map(style="background-image: url(/static/images/common/hero-bg-map.jpg)")
+		.container
+			.hero-title.map-title Найти квартиру в Новороссийске
+			.hero-link.map-link
+				a(href="#").map-link__item.hero-link__item.hero-link__item_current Квартиры в новостройках
+				a(href="#").map-link__item.hero-link__item Вторичное жильё
+	#map
+		.container
+	include modules/choose/choose

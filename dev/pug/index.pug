@@ -1,0 +1,332 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	section.hero(style='background-image: url(/static/images/common/hero-bg.jpg);')
+		.container
+			.hero-title Продажа квартир в Новороссийске
+			.hero-link
+				a(href="#").hero-link__item.hero-link__item_current Квартиры в новостройках
+				a(href="#").hero-link__item Вторичное жильё
+			.hero-form__wrap
+				form.hero-form(action="")
+					ul.hero-form__list
+						li.hero-form__list-item.hero-form__list-dist Район
+						li.hero-form__list-item.hero-form__list-deadline Срок сдачи
+						li.hero-form__list-item.hero-form__list-rooms Кол-во комнат
+						li.hero-form__list-item.hero-form__list-price Цена
+					.hero-form__btns
+						a(href="#").hero-form__btn.hero-form__btn-map 
+							+icon('place')
+							| На карте
+						button(type="submit").hero-form__btn.hero-form__btn-search
+							+icon('search')
+							| Найти объекты
+	section.section.newb
+		.container.newb-container
+			h2.section-title Новостройки
+			.section-grid.newb-list
+				a(href="#").newb-card
+					.newb-card__img-wrap
+						figure.newb-card__img
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+					.newb-card__info
+						h3.newb-card__info-title ЖК “АРФЫЕНА”
+						.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card__info-address Проспект ДзержинскогоЫВАВЫА, д. 247	
+						.newb-card__info-price 
+							span от 15 000 
+							span ₽/м
+							sup 2
+					button.newb-card__info-more Подробнее
+				a(href="#").newb-card
+					.newb-card__img-wrap
+						figure.newb-card__img
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+					.newb-card__info
+						h3.newb-card__info-title ЖК “АРЕНАВВ”
+						.newb-card__info-feature 15 мин. до ВВморя
+						.newb-card__info-address Проспект ВВ, д. 247	
+						.newb-card__info-price 
+							span от 15 000 
+							span ₽/м
+							sup 2
+					button.newb-card__info-more Подробнее
+				a(href="#").newb-card
+					.newb-card__img-wrap
+						figure.newb-card__img
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+					.newb-card__info
+						h3.newb-card__info-title ЖК “АРЕНАЫ ЫВАЫВ”
+						.newb-card__info-feature 15 мин. до моря ВЫА магазин
+						.newb-card__info-address Проспект ленина, д. 247	
+						.newb-card__info-price 
+							span от 15 000 
+							span ₽/м
+							sup 2
+					button.newb-card__info-more Подробнее
+				a(href="#").newb-card
+					.newb-card__img-wrap
+						figure.newb-card__img
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+					.newb-card__info
+						h3.newb-card__info-title ЖК “АРЕНА на арене”
+						.newb-card__info-feature 15 мин. до моря далеко
+						.newb-card__info-address Проспект ивана Дзержинского, д. 247	
+						.newb-card__info-price 
+							span от 15 000 
+							span ₽/м
+							sup 2
+					button.newb-card__info-more Подробнее
+				a(href="#").newb-card
+					.newb-card__img-wrap
+						figure.newb-card__img
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+					.newb-card__info
+						h3.newb-card__info-title ЖК “АРЕНА”
+						.newb-card__info-feature 15 мин. до моря
+						.newb-card__info-address Проспект Дзержинского, д. 247	
+						.newb-card__info-price 
+							span от 15 000 
+							span ₽/м
+							sup 2
+					button.newb-card__info-more Подробнее
+				a(href="#").newb-card
+					.newb-card__img-wrap
+						figure.newb-card__img
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+					.newb-card__info
+						h3.newb-card__info-title ЖК “АРЕНА”
+						.newb-card__info-feature 15 мин. до моря
+						.newb-card__info-address Проспект Дзержинского, д. 247	
+						.newb-card__info-price 
+							span от 15 000 
+							span ₽/м
+							sup 2
+					button.newb-card__info-more Подробнее
+			.newb-end
+				a.newb-end__link.newb-end__map(href="#") Смотреть на карте
+				a.newb-end__link.newb-end__more(href="#") Смотреть всё
+					+icon('arow_right')
+	section.section.promo(style="background-image: url(/static/images/common/promo-bg.png);")
+		.container.promo-container
+			h2.section-title Акции застройщика
+			.promo-list
+				.promo-card
+					.promo-card__img-wrap
+						figure.promo-card__img
+							img(src="https://permglavsnab.ru/upload/iblock/71d/71d4385224582281cc9051d95a5dac78.jpg" alt="img")
+					.promo-card__info-wrap
+						.promo-card__info
+							.promo-card__info-content
+								.promo-card__info-title Квартира у моря dfdgdffdgd
+								.promo-card__info-desc 
+								a(href="#").promo-card__info-more Подробнее
+									+icon('arow_right')
+						figure.promo-card__info-logo
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+				.promo-card
+					.promo-card__img-wrap
+						figure.promo-card__img
+							img(src="https://lh3.googleusercontent.com/proxy/oDYGpUIJfIkeJ8LkAJb-nIIu0zsV6qLAbIpv0DFir8tOhy4qng1rscUi_g9FQN39dgVBUr1g3fZ54cMWYzdMmHLQHAAh9AiGZv3SxNQyloMbEl2LJEIlcByMUg" alt="img")
+					.promo-card__info-wrap
+						.promo-card__info
+							.promo-card__info-content
+								.promo-card__info-title Квартира у моряd dsgsdf
+								.promo-card__info-desc за 12 038 руб./мес.
+								a(href="#").promo-card__info-more Подробнее
+									+icon('arow_right')
+						figure.promo-card__info-logo
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+				.promo-card
+					.promo-card__img-wrap
+						figure.promo-card__img
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+					.promo-card__info-wrap
+						.promo-card__info
+							.promo-card__info-content
+								.promo-card__info-title Квартира у моря
+								.promo-card__info-desc sdfsdffsdfs sdf dsf;ls;l laskk;dls;lm 456
+								a(href="#").promo-card__info-more Подробнее
+									+icon('arow_right')
+						figure.promo-card__info-logo
+							img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+	section.section.calc
+			.container.calc-container
+				h2.section-title Ипотечный калькулятор
+				form.calc-form
+					.calc-form_left
+						.calc-form__block
+							.calc-form__elem-wrap.calc-form__object-wrap
+								.calc-form__elem-title.calc-form__object-title Цель кредита
+								select.calc-form__elem.calc-form__object(name="")
+									option.calc-form__object-item(value="new") Новостройка
+									option.calc-form__object-item(value="second") Вторичка
+						.calc-form__block
+							.calc-form__block-title Стоимость недвижимости, ₽
+							.calc-form__elem-wrap.calc-form__cost-wrap
+								.calc-form__elem-title.calc-form__cost-title Стоимость недвижимости
+								input#property-value(type="number" value="1500000" min="1500000" max="30000000" disabled).calc-form__elem-field.calc-form__elem.calc-form__cost.calc-form__elem-nottriangle
+								input#property-value-range(type="range" step="50000" value="1500000" min="1500000" max="30000000").calc-form__elem-range.calc-form__cost
+						.calc-form__block
+							.calc-form__block-title Первоначальный взнос
+							.calc-form__elem-wrap.calc-form__payment-wrap
+								.calc-form__elem-title.calc-form__payment-title Первоначальный взнос
+								input#initial-payment(type="number" value="500000" min="500000" max="30000000" disabled).calc-form__elem-field.calc-form__elem.calc-form__payment.calc-form__elem-nottriangle
+								input#initial-payment-range(type="range" step="50000" value="500000" min="500000" max="30000000").calc-form__elem-range.calc-form_payment
+						.calc-form__block
+							.calc-form__block-title Срок ипотеки, лет
+							.calc-form__elem-wrap.calc-form__time-wrap
+								.calc-form__elem-title.calc-form__time-title Срок ипотеки
+								input#mortgage-payment(type="number" value="1" min="1" max="30" disabled).calc-form__elem-field.calc-form__elem.calc-form__time.calc-form__elem-nottriangle
+								input(type="range" value="1" min="1" max="30").calc-form__elem-range.calc-form_time
+						.calc-form__block.calc-form__row
+							.calc-form__block-title Использовать мат. капитал
+							label.toggle
+								input(type='checkbox')
+								.toggle_shape
+						.calc-form__block.calc-form__row
+							.calc-form__block-title Страхование жизни
+							label.toggle
+								input(type='checkbox')
+								.toggle_shape
+					.calc-form_right
+						.calc-form__counter
+							.calc-form__counter-title Сумма кредита
+							.calc-form__counter-num 
+								span#credit-amount 
+								span  ₽
+						.calc-form__counter
+							.calc-form__counter-title Ежемесячный платёж
+							.calc-form__counter-num 
+								span#monthly-payment 
+								span  ₽
+						.calc-form__counter
+							.calc-form__counter-title Процентная ставка
+							.calc-form__counter-num 
+								span#interest-rate 7.6 
+								span  %
+						ul.calc-form__checked
+							li.calc-form__checked-item Страхование жизни
+							li.calc-form__checked-item Скидка от застройщика
+							li.calc-form__checked-item Электронная регистрация сделки
+						input.phone-input.calc-form__phone(type="tel" placeholder="+7 (___) ___-__-__")
+						button(type="submit").calc-form__submit Отправить заявку
+	section.section.video(class="lozad" data-background-image="/static/images/common/video-bg.png")
+			.container.video-container
+				h2.section-title Видеообзоры недвижимости Новороссийска
+				.video-content
+					.video-wrap
+						iframe(width='630' height='360' src='https://www.youtube.com/embed/QBOeRS6wDCI' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;\picture-in-picture' allowfullscreen='')
+					.video-info
+						.video-info__blocks
+							.video-info__block.video-info__block-new
+								+icon('cityscape')
+								.video-info__block-title Новостройки
+							.video-info__block.video-info__block-second
+								+icon('home')
+								.video-info__block-title Вторичное жильё
+						.video-info__true
+							+icon('secure-shield')
+							| Только реальные объекты
+						a(href="https://www.youtube.com/watch?v=QBOeRS6wDCI" blank="_target").video-info__follow Подписаться на канал
+	section.section.stages
+			.container.stages-container
+				h2.section-title Этапы работы
+				.stages-tab
+					button.stages-tab__btn.stages-tab__btn_active Вы в Новороссийске
+					button.stages-tab__btn Вы НЕ в Новороссийске
+				.stages-content
+					.stages-content__block
+						.stages-list
+							.stages-block
+								.stages-block__num 1
+								figure.stages-block__img
+									+icon('operator')
+								ul.stages-block__list
+									li.stages-block__list-item Звонок
+									li.stages-block__list-item Потребности
+									li.stages-block__list-item Подбор вариантов
+							.stages-block
+								.stages-block__num 2
+								figure.stages-block__img
+									+icon('dialog')
+								ul.stages-block__list
+									li.stages-block__list-item Встреча в офисе
+									li.stages-block__list-item Консультация
+							.stages-block
+								.stages-block__num 3
+								figure.stages-block__img
+									+icon('cityscape_2')
+								ul.stages-block__list
+									li.stages-block__list-item Экскурсия по городу
+									li.stages-block__list-item Экскурсия по ЖК
+									li.stages-block__list-item Посещение объекта
+							.stages-block
+								.stages-block__num 4
+								figure.stages-block__img
+									+icon('date')
+								ul.stages-block__list
+									li.stages-block__list-item Бронирование
+							.stages-block
+								.stages-block__num 5
+								figure.stages-block__img
+									+icon('blank')
+								ul.stages-block__list
+									li.stages-block__list-item Бронирование
+									li.stages-block__list-item Регистрация
+					.stages-content__block 
+						.stages-list
+							.stages-block
+								.stages-block__num 1
+								figure.stages-block__img
+									+icon('operator')
+								ul.stages-block__list
+									li.stages-block__list-item Звонок
+									li.stages-block__list-item Потребности
+									li.stages-block__list-item Подбор вариантов
+							.stages-block
+								.stages-block__num 2
+								figure.stages-block__img
+									+icon('video')
+								ul.stages-block__list
+									li.stages-block__list-item Видеобзоры комплексов
+									li.stages-block__list-item Видеобзоры районов
+							.stages-block
+								.stages-block__num 3
+								figure.stages-block__img
+									+icon('cityscape_2')
+								ul.stages-block__list
+									li.stages-block__list-item Выборка квартир
+									li.stages-block__list-item Съёмка видеообзоров по квартирам
+							.stages-block.stages-block__arrow.stages-block__arrow-left
+								+icon('arow_left_down')
+							.stages-block
+								.stages-block__num 4
+								figure.stages-block__img
+									+icon('date')
+								ul.stages-block__list
+									li.stages-block__list-item Бронирование
+									li.stages-block__list-item Паспорт, снилс
+							.stages-block.stages-block__arrow.stages-block__arrow-right
+								+icon('arow_right_down')
+						.stages-options
+							.stages-block
+								figure.stages-block__img.stages-block__img-cash
+									+icon('cash')
+								ul.stages-block__list
+									li.stages-block__list-title Наличный расчёт
+									li.stages-block__list-item Электронная подпись
+									li.stages-block__list-item Сдача в МФЦ
+									li.stages-block__list-item Оплата после регистрации
+							.stages-block
+								figure.stages-block__img.stages-block__img-bank
+									+icon('bank')
+								ul.stages-block__list
+									li.stages-block__list-title Ипотека
+									li.stages-block__list-item Консультация ипотечного брокера
+									li.stages-block__list-item Отправка заявок во все банки
+									li.stages-block__list-item Загрузка документов
+									li.stages-block__list-item Подписание и сдача в МФЦ

@@ -1,0 +1,188 @@
+.hero {
+    padding: 100px 0 220px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media ( max-width: $tablet ) {
+        padding: 55px 0 40px 0;
+    }
+    &-title {
+        font-size: 81px;
+        font-weight: 700;
+        line-height: 77.36px;
+        text-align: center;
+        color: $colorMain;
+        max-width: 790px;
+        margin: auto;
+        text-align: right;
+        @media ( max-width: $large ) {
+           font-size: 50px;
+           text-align: center;
+        }
+        @media ( max-width: $tablet ) {
+            font-size: 45px;
+        }
+        @media ( max-width: $mobile ) {
+            font-size: 40px;
+            line-height: 1.3;
+        }
+        @media ( max-width: $mobilesm ) {
+            font-size: 35px;
+        }
+    }
+    &-link {
+        display: flex;
+        justify-content: center;
+        @media ( max-width: $tablet ) {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            color: $white;
+            height: 42px;
+            width: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $colorMain;
+            font-size: 17px;
+            font-weight: 400;
+            border-radius: 21px;
+            margin: 60px 16px;
+            @media ( max-width: $tablet ) {
+                margin: 8px;
+                max-width: 366px;
+                height: 57px;
+                width: 100%;
+                border-radius: 28px;
+                font-size: 23px;
+            }
+            @media ( max-width: $mobilesm ) {
+                margin: 8px 0;
+                font-size: 14px;
+            }
+            &_current {
+                background: $colorAccent;
+            }
+        }
+    }
+    &-form {
+        &__wrap {}
+        &__list {
+            color: $colorMain;
+            font-size: 13px;
+            font-weight: 400;
+            background: $white;
+            border-radius: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            @media ( max-width: $tablet ) {
+                margin: 22px 0 30px;
+                flex-direction: column;
+            }
+            &-item {
+                height: 53px;
+                max-width: 200px;
+                width: 100%;
+                border-right: 2px solid #c0c0c0; 
+                display: flex;
+                align-items: center;
+                padding: 0 14px;
+                background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#ffffff 100%); 
+                background-repeat: no-repeat, repeat;
+                background-position: right 14px top 50%, 0 0;
+                background-size: .65em auto, 100%; 
+                cursor: pointer;
+                &:first-child {
+                    padding: 0 14px 0 21px;
+                }
+                &:last-child {
+                    border: none;
+                }
+                @media ( max-width: $tablet ) {
+                    width: 100%;
+                    max-width: 100%;
+                    border: none;
+                    border-bottom: 2px solid #c0c0c0; 
+                    padding: 0 30px;
+                    background-position: right 30px top 50%, 0 0;
+                }
+            }
+            &-dist {
+                border-radius: 26px 0 0 26px;
+                max-width: 100%;
+                @media ( max-width: $tablet ) {
+                    border-radius: 26px 26px 0 0;
+                }
+            }
+            &-price {
+                border-radius: 0 26px 26px 0;
+                @media ( max-width: $tablet ) {
+                    border-radius: 0 0 26px 26px;
+                }
+            }
+        }
+        &__btn {
+            &s {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                @media ( max-width: $tablet ) {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            font-size: 17px;
+            font-weight: 600;
+            color: $white;
+            height: 42px;
+            border-radius: 21px;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            @media ( max-width: $tablet ) {
+                font-size: 23px;
+            }
+            &-map {
+                background: $colorMain;
+                width: 190px;
+                justify-content: center;
+                position: relative;
+                @media ( max-width: $tablet ) {
+                    margin-bottom: 23px;
+                }
+                .svg-sprite-icon {
+                    width: 15px;
+                    height: 19px;
+                    fill: $white;
+                    margin-right: 11px;
+                    position: absolute;
+                    left: 18px;
+                }
+            }
+            &-search {
+                background: $colorAccent;
+                padding: 0 22px;
+                margin-left: 13px;
+                .svg-sprite-icon {
+                    width: 20px;
+                    height: 20px;
+                    fill: $white;
+                    margin-right: 11px;
+                }
+                @media ( max-width: $tablet ) {
+                    margin: 0;
+                    justify-content: space-between;
+                }
+            }
+            @media ( max-width: $tablet ) {
+                width: 265px;
+                height: 58px;
+                border-radius: 29px;
+            }
+        }
+    }
+}

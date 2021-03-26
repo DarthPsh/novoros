@@ -1,0 +1,415 @@
+extends layout/main
+
+block variables
+	-var title = 'Шаблон ЖК'
+
+block content
+	section.hero.zhk(style="background-image: url(/static/images/common/hero-bg-map.jpg)")
+		.container
+			.zhk-content
+				.zhk-content__info
+					h1.zhk-content__title
+						span.zhk-content__title-piece.zhk-content__title_what Жилой комплекс
+						span.zhk-content__title-piece.zhk-content__title_name Классика
+						span.zhk-content__title-piece.zhk-content__title_where в Новороссийске
+					.zhk-content__desc
+						.zhk-content__desc-title ДО МОРЯ 6 МИНУТ НА ТРАНСПОРТЕ
+						.zhk-content__desc-subtitle Рядом с ЖК располагаются три пляжа: пляж Суджукская коса, пляж Алексино и пляж п. Мысхако
+					.zhk-content__count
+						.zhk-content__count-block
+							.count-block__num 37,11 м
+								sup 2 
+								| - 133,18 м
+								sup 2
+							.count-block__name площадь квартир
+						.zhk-content__count-block
+							.count-block__num 2 000 000 ₽
+							.count-block__name минимальная тоимость квартиры
+				form.zhk-content__form
+					.zhk-content__form-icon
+						+icon('cityscape_2')
+					.zhk-content__form-wrap
+						.zhk-content__form-title Запишитесь на просмотр в один клик
+						.zhk-content__form-desc Посмотрите своими глазами на свою будущую квартиру, походите по комнатам, почувствуйте свой новый дом
+						input(type="tel" placeholder="+7 (___) ___-__-__").phone-input.choose-form__phone
+						button(type="submit").choose-form__submit Записаться
+						.choose-form__info Нажимая на кнопку вы даете согласие на обработку 
+							a(href="#") персональных данных
+	section.section.zhk-section.zhk-needfull
+		.container.zhk-needfull-container
+			h2.section-title ВСЕ НЕОБХОДИМОЕ РЯДОМ
+			.zhk-needfull__tabs
+				button.zhk-needfull__tab.zhk-needfull__tab-territory на территории ЖК
+				button.zhk-needfull__tab.zhk-needfull__tab-nearby рядом с ЖК
+			.zhk-needfull__contents.swiper-container
+				.swiper-wrapper
+					.swiper-slide.section-grid.newb-list.zhk-needfull__content-territory.zhk-needfull__content
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title ДУТСКИЙ ЗАД!
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title СРЕДНЯЯ ШКОЛА
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title ЗЕЛЁНЫЙ СКВЕР
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title Детские и спортивные площадки
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title 2 БОЛЬШИХ ПАРКИНГА И ГОСТЕВЫЕ ПАР
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title КОММЕРЧЕСКАЯ ИНФРАСТРУКТУРА КАФ
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+					.swiper-slide.section-grid.newb-list.zhk-needfull__content-nearby.zhk-needfull__content
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title ДУТСКИЙ САД
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title СРЕДНЯЯ ШКОЛА
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title ЗЕЛЁНЫЙ СКВЕР
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title Детские и спортивные площадки
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title 2 БОЛЬШИХ ПАРКИНГА И ГОСТЕВЫЕ ПАР
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+						.newb-card
+							.newb-card__img-wrap
+								figure.newb-card__img
+									img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+							.newb-card__info
+								h3.newb-card__info-title КОММЕРЧЕСКАЯ ИНФРАСТРУКТУРА КАФ
+								.newb-card__info-feature 15 мин. до моря ЫВЫАЫВАЫВААВЫ
+		button.zhk-needfull__more УЗНАТЬ БОЛЬШЕ
+	//- section.section.zhk-section.zhk-presentation
+	//- 	.container.zhk-presentation-container
+	//- 		h2.section-title ПРЕЗЕНТАЦИЯ ЖИЛОГО КОМПЛЕКСА
+	//- 	.zhk-presentation__slider.swiper-container
+	//- 		.zhk-presentation__nav
+	//- 			button.zhk-presentation__nav-btn.zhk-presentation__nav-prev.swiper-button-prev
+	//- 				+icon('arow_right')
+	//- 			button.zhk-presentation__nav-btn.zhk-presentation__nav-next.swiper-button-next
+	//- 				+icon('arow_right')
+	//- 		.swiper-wrapper
+	//- 			.zhk-presentation__slider-item.swiper-slide
+	//- 				iframe(width='560' height='315' src='https://www.youtube.com/embed/LXb3EKWsInQ' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+	//- 			.zhk-presentation__slider-item.swiper-slide
+	//- 				iframe(width='560' height='315' src='https://www.youtube.com/embed/6oOIIVG9eRA' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+	section.section.video.zhk-section(style="background-image: url(/static/images/common/video-bg.png)")
+			.container.video-container
+				h2.section-title Видеобзор жилого комплекса «Название»
+				.video-content
+					.video-wrap
+						iframe(width='630' height='360' src='https://www.youtube.com/embed/QBOeRS6wDCI' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;\picture-in-picture' allowfullscreen='')
+					.video-info
+						.video-info__blocks
+							.video-info__block.video-info__block-new
+								+icon('cityscape')
+								.video-info__block-title Новостройки
+						.video-info__true
+							+icon('secure-shield')
+							| Только реальные объекты
+						a(href="https://www.youtube.com/watch?v=QBOeRS6wDCI" blank="_target").video-info__follow Подписаться на канал	
+	section.section.zhk-section.zhk-apartments
+		.container.zhk-apartments-container
+			h2.section-title Планировки и цены ЖК «Классика»	
+			ul.zhk-apartments__filters
+				li(data-f="all").zhk-apartments__filter.zhk-apartments__filter_active Все
+				li(data-f="stud-room").zhk-apartments__filter студии
+				li(data-f="one-room").zhk-apartments__filter 1-комн
+				li(data-f="two-room").zhk-apartments__filter 2-комн
+				li(data-f="three-room").zhk-apartments__filter 3-комн
+				li(data-f="four-room").zhk-apartments__filter 4-комн
+				li(data-f="five-room").zhk-apartments__filter 5-комн
+				li(data-f="six-room").zhk-apartments__filter 6-комн
+			.zhk-apartments__content
+				.zhk-apartments__content-grid
+					.zhk-apartments__content-card.apartment-card.two-room
+						.apartment-card__badge ХИТ ПРОДАЖ
+						.apartment-card__title ДВУХКОМНАТНАЯ КВАРТИРА
+						figure.apartment-card__img
+							img(src="https://i.pinimg.com/564x/de/3a/fd/de3afd108a97b8ebf9a3261d90fd166e.jpg", alt="img")
+						.apartment-card__square
+							.apartment-card__square-all Общая площадь: 37,1 м
+								sup 2
+							.apartment-card__square-live Жилая площадь: 37,1 м
+								sup 2
+						button.apartment-card__more УЗНАТЬ СТОИМОСТЬ 
+					.zhk-apartments__content-card.apartment-card.one-room
+						.apartment-card__title ОДНОКОМНАТНАЯ КВАРТИРА
+						figure.apartment-card__img
+							img(src="https://www.archrevue.ru/images/tb/3/4/1/34119/15614761871799_w1920h1440.jpg", alt="img")
+						.apartment-card__square
+							.apartment-card__square-all Общая площадь: 37,1 м
+								sup 2
+							.apartment-card__square-live Жилая площадь: 37,1 м
+								sup 2
+						button.apartment-card__more УЗНАТЬ СТОИМОСТЬ
+					.zhk-apartments__content-card.apartment-card.three-room
+						.apartment-card__title ТРЕХКОМНАТНАЯ КВАРТИРА
+						figure.apartment-card__img
+							img(src="https://bricknews.ru/wp-content/uploads/2017/05/%D0%B3%D0%B3%D1%88%D0%BB.jpeg", alt="img")
+						.apartment-card__square
+							.apartment-card__square-all Общая площадь: 37,1 м
+								sup 2
+							.apartment-card__square-live Жилая площадь: 37,1 м
+								sup 2
+						button.apartment-card__more УЗНАТЬ СТОИМОСТЬ
+	section.section.zhk-section.zhk-save(style="background-image: url(/static/images/common/hero-bg-map.jpg)")
+		.container.zhk-save-container
+			h2.section-title БЕЗОПАСНОСТЬ ЖИЛЬЦОВ
+			.zhk-save__content
+				.zhk-save__block
+					.zhk-save__block-icon
+						+icon('secure')
+					.zhk-save__block-text Закрытые территории дворов
+				.zhk-save__block
+					.zhk-save__block-icon
+						+icon('camera')
+					.zhk-save__block-text Видеонаблюдение на территории
+				.zhk-save__block
+					.zhk-save__block-icon
+						+icon('zamok')
+					.zhk-save__block-text Видеодомофон и электронные ключи на калитках и подъездах
+				.zhk-save__block
+					.zhk-save__block-icon
+						+icon('ring')
+					.zhk-save__block-text Пожарная сигнализация и система автоматического дымоудаления
+	section.section.zhk-section.zhk-select
+		.container.zhk-select-container
+			h2.section-title Подобрать свободную квартиру
+			.section-subtitle ПОЛУЧИТЕ ПОДБОРКУ СВОБОДНЫХ КВАРТИР С ПЛАНИРОВКАМИ И ЦЕНАМИ
+			.zhk-select__count-floor 14
+			form.zhk-select__form
+				.zhk-select__form-block.zhk-select__slider
+					.zhk-select__form-slider
+						.zhk-select__form-title Выберите этаж:
+						.zhk-select__form-floor
+					.zhk-select__form-num
+						span.noUi-handle-upper-num 1
+						p этаж
+				.zhk-select__form-block 
+					.zhk-select__form-title Количество комнат:
+					.zhk-select__form-checks 
+						label
+							input(type="checkbox").checkbox
+							| Все
+						label
+							input(type="checkbox").checkbox
+							| Cтудия
+						label
+							input(type="checkbox").checkbox
+							| 1-комнатная
+						label
+							input(type="checkbox").checkbox
+							| 2-комнатная
+						label
+							input(type="checkbox").checkbox
+							| 3-комнатная
+						label
+							input(type="checkbox").checkbox
+							| 4-комнатная
+				.zhk-select__form-input
+					input(type="text" placeholder="Ваше имя").choose-form__name
+					input(type="tel" placeholder="+7 (___) ___-__-__").phone-input.choose-form__phone
+					input(type="email" placeholder="E-mail").choose-form__name
+				button(type="submit").choose-form__submit ПОЛУЧИТЬ ПОДБОРКУ
+	section.section.zhk-section.zhk-how
+		.container.zhk-how-container
+			h2.section-title КАК ПРИОБРЕСТИ
+			.zhk-how__content
+				.zhk-how__block
+					figure.zhk-how__block-icon
+						+icon('calc')
+					.zhk-how__block-title Ипотека от банков партнеров
+				.zhk-how__block
+					figure.zhk-how__block-icon
+						+icon('cal')
+					.zhk-how__block-title Рассрочка
+				.zhk-how__block 
+					figure.zhk-how__block-icon
+						+icon('purse')
+					.zhk-how__block-title Материнский капитал
+				.zhk-how__block
+					figure.zhk-how__block-icon
+						+icon('doc')
+					.zhk-how__block-title Военная ипотека
+			button.choose-form__submit.zhk-how__btn ПОЛУЧИТЬ РАСЧЕТ 
+	section.section.zhk-section.zhk-developer
+		.container.zhk-developer-container
+			h2.section-title НАДЁЖНЫЙ ЗАСТРОЙЩИК
+			.zhk-developer__content
+				.zhk-developer__files
+					figure.zhk-developer__files-logo
+						img(src="https://image.freepik.com/free-vector/gradient-logo-template-with-abstract-shape_23-2148204210.jpg", alt="img")
+					.zhk-developer__files-title ДОКУМЕНТАЦИЯ:
+					ul.zhk-developer__files-list
+						li
+							a(href="#") ПРИКАЗ О ВНЕСЕНИИ ИЗМЕНЕНИЙ В РАЗРЕШЕНИЕ НА СТРОИТЕЛЬСТВО № 92-р ОТ 11.12.2019
+						li
+							a(href="#") ПРОЕКТНАЯ ДЕКЛАРАЦИЯ 2 ЭТАП СТРОИТЕЛЬСТВА ОТ 09.12.2019 г.
+						li
+							a(href="#") ПРОЕКТНАЯ ДЕКЛАРАЦИЯ 2 ЭТАП СТРОИТЕЛЬСТВА ОТ 09.12.2019 г.
+						li
+							a(href="#") ПРОЕКТНАЯ ДЕКЛАРАЦИЯ 2 ЭТАП СТРОИТЕЛЬСТВА ОТ 09.12.2019 г.
+						li
+							a(href="#") ПРОЕКТНАЯ ДЕКЛАРАЦИЯ 2 ЭТАП СТРОИТЕЛЬСТВА ОТ 09.12.2019 г.
+						li
+							a(href="#") ПРОЕКТНАЯ ДЕКЛАРАЦИЯ 2 ЭТАП СТРОИТЕЛЬСТВА ОТ 09.12.2019 г.
+					.zhk-developer__files-more показать ещё >
+				.zhk-developer__info Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laboriosam ea ullam perspiciatis molestias? Sed dolorum velit at et numquam obcaecati similique odit eos dolor quia. Reiciendis quis minima quasi assumenda quaerat expedita odit aperiam eligendi vel sequi sed consequatur dicta voluptatibus a veniam inventore ab incidunt, iure rerum, qui atque, mollitia explicabo et nihil. Nisi eos voluptatibus, laudantium quidem quam reiciendis quos mollitia odio repudiandae eius? Laborum assumenda itaque repellat suscipit magnam repudiandae autem eligendi voluptates sapiente velit cum incidunt exercitationem eius, enim cumque culpa odit. Rem, nemo praesentium minus saepe assumenda ab, qui ullam officia tempora possimus ea quibusdam ipsa dolor blanditiis nostrum eligendi? Sint illum laboriosam quae repudiandae modi veritatis quod rem libero autem animi necessitatibus praesentium, veniam saepe voluptatum ut at quaerat iste maiores mollitia in? Explicabo nobis harum aut, minima repellat illum asperiores. Similique quaerat magnam architecto. Sint, rerum facilis. Asperiores et vitae hic accusamus minima modi architecto. Error vel delectus, hic, assumenda reprehenderit nostrum vero doloribus saepe ea aliquid magnam, autem eos tenetur unde minus? Perferendis quae ipsa nobis? Labore nisi, cumque quis animi corporis vero quia! Corporis architecto veniam totam pariatur esse dicta asperiores maiores doloribus minus doloremque, nostrum alias exercitationem nihil ea?
+	section.section.zhk-section.zhk-process
+		.container.zhk-process-container
+			h2.section-title ХОД СТРОИТЕЛЬСТВА
+			.zhk-process__content
+				.zhk-process__num
+					.zhk-process__num-icon
+						+icon('kran')
+						.zhk-process__num-title ГОТОВНОСТЬ ОБЪЕКТА
+					.zhk-process__num-precent 62%
+				.zhk-process__slider
+					.zhk-process__slider-contents
+						.zhk-process__slider-content
+							.process-slider.swiper-container
+								.process-slider__nav.process-slider__nav-prev.swiper-button-prev
+									+icon('arow_right')
+								.process-slider__nav.process-slider__nav-next.swiper-button-next
+									+icon('arow_right')
+								.swiper-wrapper
+									.process-slider__item.swiper-slide
+										img(src="https://fenix-vologda.ru/wp-content/uploads/2018/12/1010944-1024x685.jpg", alt="img")
+									.process-slider__item.swiper-slide
+										img(src="https://thumbs.dreamstime.com/b/%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D1%8D%D1%82%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0-%D0%BD%D0%B0-%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0%D1%85-%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B2-143278197.jpg", alt="img")
+									.process-slider__item.swiper-slide
+										img(src="https://papamaster.su/wp-content/uploads/2017/07/stroitelstvo-mnogoetazhnyx-domov-po-monolitnoj-texnologii.jpg", alt="img")
+						.zhk-process__slider-content
+							.process-slider.swiper-container
+								.process-slider__nav.process-slider__nav-prev.swiper-button-prev
+									+icon('arow_right')
+								.process-slider__nav.process-slider__nav-next.swiper-button-next
+									+icon('arow_right')
+								.swiper-wrapper
+									.process-slider__item.swiper-slide
+										img(src="https://fenix-vologda.ru/wp-content/uploads/2018/12/1010944-1024x685.jpg", alt="img")
+									.process-slider__item.swiper-slide
+										img(src="https://thumbs.dreamstime.com/b/%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D1%8D%D1%82%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0-%D0%BD%D0%B0-%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0%D1%85-%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B2-143278197.jpg", alt="img")
+									.process-slider__item.swiper-slide
+										img(src="https://papamaster.su/wp-content/uploads/2017/07/stroitelstvo-mnogoetazhnyx-domov-po-monolitnoj-texnologii.jpg", alt="img")
+						.zhk-process__slider-content
+							.process-slider.swiper-container
+								.process-slider__nav.process-slider__nav-prev.swiper-button-prev
+									+icon('arow_right')
+								.process-slider__nav.process-slider__nav-next.swiper-button-next
+									+icon('arow_right')
+								.swiper-wrapper
+									.process-slider__item.swiper-slide
+										img(src="https://fenix-vologda.ru/wp-content/uploads/2018/12/1010944-1024x685.jpg", alt="img")
+									.process-slider__item.swiper-slide
+										img(src="https://papamaster.su/wp-content/uploads/2017/07/stroitelstvo-mnogoetazhnyx-domov-po-monolitnoj-texnologii.jpg", alt="img")
+						.zhk-process__slider-content
+							.process-slider.swiper-container
+								.process-slider__nav.process-slider__nav-prev.swiper-button-prev
+									+icon('arow_right')
+								.process-slider__nav.process-slider__nav-next.swiper-button-next
+									+icon('arow_right')
+								.swiper-wrapper
+									.process-slider__item.swiper-slide
+										img(src="https://fenix-vologda.ru/wp-content/uploads/2018/12/1010944-1024x685.jpg", alt="img")
+									.process-slider__item.swiper-slide
+										img(src="https://thumbs.dreamstime.com/b/%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D1%8D%D1%82%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0-%D0%BD%D0%B0-%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0%D1%85-%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B2-143278197.jpg", alt="img")
+									.process-slider__item.swiper-slide
+										img(src="https://papamaster.su/wp-content/uploads/2017/07/stroitelstvo-mnogoetazhnyx-domov-po-monolitnoj-texnologii.jpg", alt="img")
+					.zhk-process__slider-tabs 
+						.zhk-process__slider-tab Литер 1
+						.zhk-process__slider-tab Литер 2
+						.zhk-process__slider-tab Литер 3
+						.zhk-process__slider-tab Литер 4
+					button.zhk-process__slider-btn ЗАПИСАТЬСЯ НА ПРОСМОТР
+	section.section.zhk-section.zhk-map#zhk-map
+		script.
+			ymaps.ready(function () {
+			var zhkMap = new ymaps.Map("zhk-map", {
+			center: [44.715092, 37.767258], 
+			zoom: 13,
+			controls: []
+			}, {
+			searchControlProvider: 'yandex#search'
+			}),
+			// Создаём макет содержимого.
+			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+			'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+			),
+			zhkPlacemark = new ymaps.Placemark(zhkMap.getCenter(), {
+			hintContent: 'Собственный значок метки',
+			balloonContent: 'Это красивая метка'
+			}, {
+			// Опции.
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#image',
+			// Своё изображение иконки метки.
+			iconImageHref: '/static/images/sprite/symbol/sprite.svg#place',
+			// Размеры метки.
+			iconImageSize: [109, 135],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-54, -135]
+			});
+			zhkMap.geoObjects
+			.add(zhkPlacemark);
+			});
+			//отключаем зум колёсиком мышки
+			zhkMap.behaviors.disable('scrollZoom');
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			//... отключаем перетаскивание карты
+			zhkMap.behaviors.disable('drag');
+			}

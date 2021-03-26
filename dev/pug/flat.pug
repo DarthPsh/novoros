@@ -1,0 +1,136 @@
+extends layout/main
+
+block variables
+    -var title = 'Страница квартиры'
+
+block content
+    section.hero.flat(style='background-image: url(/static/images/common/hero-bg-map.jpg);')
+        .container
+            .hero-title.flat-title Найти квартиру в Новороссийске
+            .hero-link.flat-link
+                a(href="#").flat-link__item.hero-link__item.hero-link__item_current Квартиры в новостройках
+                a(href="#").flat-link__item.hero-link__item Вторичное жильё
+    section.flat-content
+        .container
+            .flat-content__wrap
+                .flat-content__slider
+                    .flat-content__head
+                        .flat-content__head-title 2-к квартира, 60.5 м², 6/16 эт.
+                        .flat-content__head-date Размещено 5 дней назад
+                    .slider-main.swiper-container
+                        .slider-main__nav
+                            .slider-main__nav-item.slider-main__nav-prev
+                                +icon('arow_right')
+                            .slider-main__nav-item.slider-main__nav-next
+                                +icon('arow_right')
+                        .slider-main__pagination.swiper-pagination
+                        .swiper-wrapper.slider-main__light
+                            .slider-main__item.swiper-slide
+                                img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .slider-main__item.swiper-slide
+                                img.swiper-lazy(src="https://kvartirka.com/blog/wp-content/uploads/2020/01/CTjBGLa2AdB1W7UbfBMMYdaTp9FxuUfBv7Cn.jpg", alt="img")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .slider-main__item.swiper-slide
+                                img.swiper-lazy(src="https://i.pinimg.com/originals/58/95/c4/5895c4d1e62505ac1a06939e0d3d3600.jpg", alt="img")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                    .slider-list.swiper-container
+                        .swiper-wrapper
+                            .slider-list__item.swiper-slide
+                                img.swiper-lazy(src="https://st.depositphotos.com/1389715/4527/i/600/depositphotos_45276821-stock-photo-bright-interior-of-living-room.jpg", alt="img")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .slider-list__item.swiper-slide
+                                img.swiper-lazy(src="https://kvartirka.com/blog/wp-content/uploads/2020/01/CTjBGLa2AdB1W7UbfBMMYdaTp9FxuUfBv7Cn.jpg", alt="img")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .slider-list__item.swiper-slide
+                                img.swiper-lazy(src="https://i.pinimg.com/originals/58/95/c4/5895c4d1e62505ac1a06939e0d3d3600.jpg", alt="img")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                .flat-content__info
+                    .flat-content__head
+                        .flat-content__head-price 3 120 524 ₽
+                    .flat-content__info-btns
+                        button.flat-content__info-btn.btn-cta ЗАКАЗАТЬ ЗВОНОК
+                        .btn-show__wrap
+                            button.flat-content__info-btn.btn-show Показать телефон
+                                span +7 (9XX) XXX - XX - XX
+                            a.btn-show__link(href="tel:+7 (918) 000 - 00 - 00") +7 (918) 000 - 00 - 00
+                    ul.flat-content__info-list
+                        li.flat-content__info-item
+                            span.attribute-name Тип дома
+                            span.attribute-value Панельный
+                        li.flat-content__info-ite
+                            span.attribute-name Этаж
+                            span.attribute-value 1
+                        li.flat-content__info-item
+                            span.attribute-name Количество комнат
+                            span.attribute-value 2
+                        li.flat-content__info-item
+                            span.attribute-name Общая площадь
+                            span.attribute-value 60,5 м
+                                sup 2
+                        li.flat-content__info-item
+                            span.attribute-name Жилая ьплощад
+                            span.attribute-value 50,5 м
+                                sup 2
+                        li.flat-content__info-item
+                            span.attribute-name арибут 
+                            span.attribute-value 456
+                        li.flat-content__info-item
+                            span.attribute-name название
+                            span.attribute-value ьный
+                        li.flat-content__info-item
+                            span.attribute-name ывдлаыждлва
+                            span.attribute-value дада
+                        li.flat-content__info-item
+                            span.attribute-name Ашот Ашотович
+                            span.attribute-value Вах!
+                    .flat-content__info-bonus
+                        .bonus-block
+                            figure.bonus-block__img
+                                +icon('calc')
+                            .bonus-block__desc Ипотека от банков партнеров
+                        .bonus-block
+                            figure.bonus-block__img
+                                +icon('cal')
+                            .bonus-block__desc Рассрочка
+                        .bonus-block
+                            figure.bonus-block__img
+                                +icon('purse')
+                            .bonus-block__desc Материнский капитал
+                        .bonus-block
+                            figure.bonus-block__img
+                                +icon('doc')
+                            .bonus-block__desc Военная ипотека
+            .flat-content__wp-content Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis autem quidem corrupti quasi amet, cumque debitis. Tenetur impedit ratione obcaecati incidunt cumque iure, explicabo eum laboriosam commodi temporibus porro aut.
+                ul
+                    li hello world
+                    li hello world
+                    li hello world
+    section.similar
+        .container
+            .similar-title Похожие продукты
+            .similar-list
+                .similar-card
+                    .similar-card__img
+                        img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+                    .similar-card__title 2-к квартира, 60.5 м²
+                    .similar-card__price 3 120 524 ₽
+                    .similar-card__address Центральный район,ул. Бориса Пупко,8
+                .similar-card
+                    .similar-card__img
+                        img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+                    .similar-card__title 2-к квартира, 60.5 м²
+                    .similar-card__price 3 120 524 ₽
+                    .similar-card__address Центральный район,ул. Бориса Пупко,8
+                .similar-card
+                    .similar-card__img
+                        img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+                    .similar-card__title 2-к квартира, 60.5 м²
+                    .similar-card__price 3 120 524 ₽
+                    .similar-card__address Центральный район,ул. Бориса Пупко,8
+                .similar-card
+                    .similar-card__img
+                        img(src="https://gdenovostroyki.ru/upload/iblock/00f/00fd7816120f01ac43bdeea878e4adb2.jpg" alt="img")
+                    .similar-card__title 2-к квартира, 60.5 м²
+                    .similar-card__price 3 120 524 ₽
+                    .similar-card__address Центральный район,ул. Бориса Пупко,8

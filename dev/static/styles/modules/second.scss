@@ -1,0 +1,154 @@
+.second {
+    padding-top: 45px;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        @media ( max-width: $tablet ) {
+            flex-direction: column;
+            padding: 50px 0;
+            padding-top: 0;
+        }
+    }
+    &-side {
+        flex-basis: 25%;
+        min-width: 315px;
+        padding-right: 15px;
+    }
+    &-list {
+        flex-basis: 75%;
+        max-width: 800px;
+        &__card {
+            padding: 15px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            @media ( max-width: $tablet ) {
+                box-shadow: -2px 1px 26px 3px rgba(0, 0, 0, 0.09);
+                margin-bottom: 20px;
+            }
+            &:hover {
+                background: rgba(#0c2e59, .1);
+                .second-list__card-pagination {
+                    opacity: 1;
+                }
+                .second-list__card-more {
+                    opacity: 1;
+                }
+            }
+            &-content {
+                display: flex;
+                @media ( max-width: $mobilesm ) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            &-slider {
+                width: 263px;
+                min-width: 263px;
+                height: 210px;
+                border-radius: 20px;
+                position: relative;
+                margin: 0;
+                @media ( max-width: $tabletlg ) {
+                    width: 168px;
+                    height: 135px;
+                    min-width: 168px;
+                }
+            }
+            &-pagination {
+                opacity: 0;
+                .swiper-pagination-bullet-active {
+                    background: $colorAccent;
+                }
+            }
+            &-img {
+                background: #e6e9ee;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-info {
+                padding: 15px 20px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: relative;
+                @media ( max-width: $tabletlg ) {
+                    padding: 12px 15px;
+                }
+            }
+            &-title {
+                font-size: 18px;
+                font-weight: 700;
+                color: $colorMain;
+                @media ( max-width: $tabletlg ) {
+                   font-size: 15px;
+                }
+            }
+            &-price {
+                color: $colorAccent;
+                font-size: 33px;
+                font-weight: 700;
+                @media ( max-width: $tabletlg ) {
+                    font-size: 20px;
+                }
+            }
+            &-address {
+                font-size: 17px;
+                font-weight: 400;
+                color: $colorMain;
+                @media ( max-width: $tabletlg ) {
+                   font-size: 10px;
+                }
+            }
+            &-bot {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &-date {
+                font-size: 15px;
+                font-weight: 400;
+                color: $colorMain;
+                @media ( max-width: $tabletlg ) {
+                    font-size: 9px;
+                }
+            }
+            &-more {
+                max-width: 200px;
+                width: 100%;
+                color: $white;
+                background: $colorAccent;
+                text-decoration: underline;
+                height: 42px;
+                border-radius: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 17px;
+                font-weight: 500;
+                opacity: 0;
+                @media ( max-width: $tabletlg ) {
+                    font-size: 10px;
+                    height: 30px;
+                    max-width: 100px;
+                }
+                @media ( max-width: $tablet ) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    max-width: 100%;
+                    background: transparent;
+                    color: transparent;
+                }
+            }
+        }
+    }
+}

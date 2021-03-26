@@ -1,0 +1,312 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/sprite";
+//@include sprites($spritesheet-sprites);
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.3;
+  overflow-x: hidden;
+  position: relative;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: $colorMain;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select { font: inherit; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea { vertical-align: middle; }
+
+textarea { resize: none; }
+
+section { position: relative; }
+
+input,
+select,
+button { outline: none; }
+
+input[type='number'] {
+  &::-webkit-inner-spin-button { 
+    display: none;
+  }
+}
+
+button { cursor: pointer; }
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.content { flex: 1 0 auto; }
+
+.container {
+  margin: 0 auto;
+  max-width: $content;
+  width: 100%;
+  padding: 0 15px;
+  @media ( max-width: $mobile ) {
+    max-width: 460px;
+  }
+}
+
+.section {
+  &-title {
+    font-size: 59px;
+    font-weight: 700;
+    color: $colorMain;
+    text-align: center;
+    padding-bottom: 60px;
+    text-transform: uppercase;
+    @media ( max-width: $tablet ) {
+      font-size: 43px;
+    }
+    @media ( max-width: $mobile ) {
+      font-size: 30px !important;
+      padding-bottom: 30px;
+    }
+    @media ( max-width: $mobilesm ) {
+      font-size: 24px !important;
+    }
+  }
+  &-subtitle {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: $colorMain;
+    padding-bottom: 60px;
+    @media ( max-width: $tablet ) {
+      font-size: 20px;
+    }
+    @media ( max-width: $mobile ) {
+      font-size: 16px;
+    }
+  }
+}
+
+$color_checkbox_default:#8E8E93;
+$transition: .3s linear;
+$width: 62px;
+$height: $width/2;
+
+.toggle {
+    cursor: pointer;
+    .toggle_shape {
+      width: 62px;
+      height: 28px;
+      display: block;
+      border: 2px solid #d3d3d3;
+      border-radius: 28px;
+      background-color: #d3d3d3;
+      position: relative;
+      &:after{
+        transition: .2s linear;
+        content: "";
+        width: 30px;
+        height: 28px;
+        display: block;
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: 2px 3px 2px rgba(0, 0, 0, .4);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        transition: .2s linear;
+      }
+    }
+  input[type = "checkbox"] {
+    display: none;
+    &:checked + .toggle_shape{
+      border-color: $colorAccent;
+      background-color: $colorAccent;
+      &:after{
+        left: 31px;
+      }
+    }
+  }  
+}
+
+.phone {
+  &-input {
+    max-width: 400px;
+    width: 100%;
+    height: 55px;
+    border-radius: 26px;
+    border: 2px solid #d3d3d3;
+    background-color: $white;
+    font-size: 27px;
+    font-weight: 500;
+    padding-left: 25px;
+    color: $colorMain;
+  }
+}
+
+input {
+  &[type="checkbox"] {
+    cursor: pointer;
+    appearance: none;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    transition: 0;
+    background-position: center -10px;
+    background: $white;
+    border: 2px solid $colorMain;
+    &:checked {
+        background: $colorMain url('static/images/common/check.svg') center no-repeat;
+    }
+  }
+}
+
+
+.poligon {
+    &_left {
+      position: absolute;
+      z-index: 9999;
+      // height: 100%;
+      width: 12%;
+      top: 0;
+      left: 0;
+      perspective: 100px;  
+      @media ( max-width: 1500px ) {
+        width: 8%;
+      }
+      @media ( max-width: 1300px ) {
+        width: 5%;
+      }
+      @media ( max-width: 1200px ) {
+        display: none;
+      }
+      &__img {
+        position: absolute;
+        perspective: 100px;  
+      }
+      &_1 {
+        top: 480px;
+        right: 0;
+        width: 60%;
+      }
+      &_2 {
+        top: 760px;
+        left: 0;
+        width: 100%;
+      }
+      &_3 {
+        top: 2500px;
+        left: 0;
+        width: 100%;
+      }
+      &_4 {
+        top: 3325px;
+        right: 0;
+        width: 60%;
+      }
+      &_5 {
+        top: 3800px;
+        right: 0;
+        width: 60%;
+      }
+      &_6 {
+        top: 4500px;
+        left: 0;
+        width: 60%;
+      }
+    }
+}
+
+.poligon {
+  &_right {
+    position: absolute;
+    z-index: 9999;
+    // height: 100%;
+    width: 12%;
+    top: 0;
+    right: 0;
+    perspective: 100px;
+    @media ( max-width: 1500px ) {
+      width: 8%;
+    }  
+    @media ( max-width: 1300px ) {
+      width: 5%;
+    }
+    @media ( max-width: 1200px ) {
+      display: none;
+    }
+    &__img {
+      position: absolute;
+      perspective: 100px;  
+    }
+    &_1 {
+      top: 800px;
+      right: 0;
+      width: 100%;
+    }
+    &_2 {
+      top: 2500px;
+      right: 0;
+      width: 50%;
+    }
+    &_3 {
+      top: 3300px;
+      left: 0;
+      width: 60%;
+    }
+    &_4 {
+      top: 4900px;
+      right: 0;
+      width: 100%;
+    }
+    &_5 {
+      top: 5600px;
+      left: 0;
+      width: 70%;
+    }
+  }
+}
+
+
+//Модули
+@import "modules/modules";
